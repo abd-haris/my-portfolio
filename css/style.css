@@ -1,0 +1,435 @@
+:root {
+	--primary: rgb(238, 238, 238);
+	--satu: rgb(34, 40, 49);
+	--dua: rgb(79, 138, 139);
+	--tiga: rgb(251, 212, 109);
+}
+
+
+*	{
+	margin:	0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body	{
+	font-family: 'Saira Semi Condensed', sans-serif;
+	/*font-family: 'Limelight', cursive;*/
+	background: var(--primary);
+	color: var(--satu);
+}
+
+/* header section */
+header {
+	width: 100%;
+	background-color: rgba(238,238,238,0);
+	opacity: 1;
+	background-image:  linear-gradient(rgba(80, 139, 140, 0.1) 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, rgba(80, 139, 140, 0.1) 1.4000000000000001px, rgba(238,238,238,0) 1.4000000000000001px);
+	background-size: 28px 28px;	
+	min-height: 100vh;	
+}
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5rem 5%;
+	border-bottom: 1px solid var(--satu);
+	align-items: center;
+	background-color: var(--primary);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999999;
+}
+
+nav .navbar-logo a {
+	font-family: 'Limelight', cursive;
+	color: var(--satu);
+	font-size: 2rem;
+}
+
+nav .navbar-list a {
+	display: inline-block;
+	margin: 0 1rem;
+	color: var(--satu);
+	font-size: 1.2rem;
+}
+
+nav .searches {
+	display: flex;
+	align-items: center;
+	border: 1px solid #eee;
+	background-color: #fff;
+	padding-left: 0.5rem;
+	border-radius: 0.4rem;
+	box-shadow: -6px 6px 0 -1px var(--satu);
+}
+
+nav .search .searches input {
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 1rem;
+	background: none;
+	color: var((--satu));
+}
+
+nav .humberger-menu {
+	color: var(--satu);
+	display: none;
+}
+
+header .home {
+	padding: 1.5rem 5%;
+	display: flex;
+	align-items: center;
+}
+
+header .home .content {
+	flex: 1 1 30rem;
+	margin-top: 7rem;
+}
+
+header .home .content h2 {
+	font-size: 4rem;
+	font-weight: 700;
+	text-shadow: -4px 4px var(--tiga);
+}
+
+header .home .content p {
+	font-size: 1.1rem;
+	margin: 0;
+	transform: translateY(-0.5rem);
+}
+
+header .home .cta {
+	display: inline-block;
+	width: 8rem;
+	height: 3rem;
+	background-color: var(--satu);
+	border-radius: 0.4rem;
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--satu);
+	margin-top: 1rem;
+	position: relative;
+}
+
+header .home .cta::before {
+	content: "Jelajahi";
+	width: 100%;
+	height: 100%;
+	color: var(--satu);
+	background-color: var(--primary);
+	border: 1px solid var(--satu);
+	position: absolute;
+	border-radius: 0.4rem;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+}
+
+header .home .cta:hover::before {
+	transform: translate(0.4rem, -0.4rem);
+	background-color: var(--dua);
+}
+
+header .home .cta:active::before {
+	transform: translate(0, 0);
+	background-color: var(--tiga);
+}
+
+header .home .row-img	{
+	flex: 1 1 30rem;
+	margin-top: 6.5rem;
+}
+
+header .home .row-img img {
+	border-radius: 0.4rem;
+	box-shadow: -7px 7px 0 -1px var(--satu);
+}
+
+
+/* Tentang Saya */
+.about {
+	background-color: var(--satu);
+	padding: 5rem 5%;
+	text-align: center;
+	min-height: 100vh;
+}
+
+.about h3,
+.all-project h3 {
+	color: var(--primary);
+	font-size: 2.5rem;
+}
+
+.about h3 span, 
+.all-project h3 span {
+	color: var(--tiga);
+	text-shadow: -1px 1px var(--satu),
+	-2px 2px var(--dua);
+}
+
+.about p,
+.all-project p {
+	color: var(--primary);
+	font-size: 1.2rem;
+	font-weight: 200;
+	transform: translateY(-0.5rem);
+}
+
+.about .row,
+.all-project .row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 5rem 0;
+}
+
+.about .row .about-card {
+	width: 18rem;
+	height: 10rem;
+	background-color: var(--primary);
+	box-shadow: 0 25px 10px -15px rgba(0, 0, 0, 0.5);
+	border-radius: 0.4rem 0 0.4rem 0;
+	overflow: hidden;
+	margin: 1rem 0.2rem;
+	position: relative;
+	transition: 0.3s;
+}
+
+.about .row .about-card:hover {
+	transform: translateY(-0.5rem);
+	box-shadow: 0 40px 10px -20px rgba(0, 0, 0, 0.5); 
+}
+
+.about .row .about-card .card-caption {
+	color: var(--satu);
+	font-size: 1.3rem;
+	font-weight: 500;
+	background-color: var(--primary);
+	border-radius: 0.3rem;
+	box-shadow: 0 3px 1px -1px rgba(34, 40, 49, 0.7);
+	display: inline-block;
+	width: 8rem;
+	height: 2.5rem;
+	position: absolute;
+	top: 37%;
+	left: 5.2rem;
+	text-align: center;
+	line-height: 2.5rem;
+	transition: 0.3s;
+}
+
+.about .row .about-card .card-caption:hover {
+	transform: translateY(-0.5rem);
+	box-shadow: 0 14px 1px -7px rgba(34, 40, 49, 0.7);
+	background-color: var(--dua);
+}
+
+.about .row .about-card .card-img-satu {
+	width: 100%;
+	height: 50%;
+	background-image: url(../img/about-1.jpg);
+}
+
+.about .row .about-card .card-img-dua {
+	width: 100%;
+	height: 50%;
+	background-image: url(../img/about-2.jpg);
+}
+
+.about .row .about-card .card-img-tiga {
+	width: 100%;
+	height: 50%;
+	background-image: url(../img/about-3.jpg);
+}
+
+.about .row .about-card .card-img-empat {
+	width: 100%;
+	height: 50%;
+	background-image: url(../img/about-4.jpg);
+}
+
+/* All-Project Section */ 
+.all-project {
+	background-color: var(--dua);
+	padding: 5rem 5%;
+	text-align: center;
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+.all-project .row {
+	margin: 0;
+}
+
+.all-project .row .project-card {
+	width: 22rem;
+	height: 14rem;
+	background-color: var(--tiga);
+	margin: 2rem 1.5em;
+	overflow: hidden;
+	box-shadow: 10px 10px rgb(0, 0, 0);
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+
+.all-project .row .project-card:hover {
+	transform: translate(10px, 10px);
+	box-shadow: 0 0 rgb(0, 0, 0);
+	border: 1px solid rgb(0, 0, 0);
+}
+
+
+
+.project-card .card-img {
+	width: 100%;
+	height: 70%;
+	background-position: center;
+	object-fit: cover; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 5px 2px -2px rgba(0, 0, 0, 0.5);
+}
+
+.project-card .card-img.satu {
+	background-image: url(../img/project-1.jpg);
+}
+
+.project-card .card-img.dua {
+	background-image: url(../img/project-2.jpg);
+}
+
+.project-card .card-img.tiga {
+	background-image: url(../img/project-3.jpg);
+}
+
+.project-card .card-caption {
+	padding: 2rem 0;
+}
+
+.project-card .card-caption p {
+	color: var(--satu);
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 0;
+}
+
+
+/* Footer */
+footer {
+	background-color: var(--primary);
+	text-align: center;
+	padding: 1rem 0 3rem;
+}
+
+footer .socials {
+	padding: 1rem 0;
+}
+
+footer .socials a {
+	color: var(--satu);
+	margin: 1rem;
+}
+
+footer .socials a:hover, 
+footer .links a:hover {
+	color: var(--dua);
+}
+
+footer .links {
+	margin-bottom: 1.3rem;
+}
+
+footer .links a {
+	color: var(--satu);
+	padding: 0.7rem 1rem;
+}
+
+footer .credits {
+	font-size: 0.8rem;
+}
+
+footer .credits a {
+	color: var(--satu);
+	font-weight: 700;
+}
+
+
+/* Responsive breakpoint */ 
+@media (max-width: 758px) {
+
+	#humberger-menu {
+		display: inline-block;
+		align-self: center;
+		transform: translateY(0.5rem);
+	}
+
+	header nav .navbar-list {
+		position: absolute;
+		top: 80%;
+		right: 0.5%;
+		background: #fff;
+		transition: 0.2s ease-in;
+		transition: 0.5s;
+		opacity: 0;
+		border-radius: 0.4rem;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid var(--satu);
+	}
+
+	header nav .navbar-list.active	{
+		opacity: 1;
+	}
+
+		header nav .navbar-logo a {
+		font-size: 1.5rem;
+	}
+
+
+	nav .searches, 
+	nav .search .searches input {
+		font-size: 0.8rem;
+	}
+
+	header .home {
+		flex-wrap: wrap;
+	}
+
+	header .home .content {
+		width: 100%;
+		order: 2;
+		margin-top:0;
+		text-align: center;
+
+	}
+
+	header .home .row-img img {
+		width: 100%;
+		order: 1;
+	}
+} 
+
+@media (max-width: 450px) {
+	header nav .navbar-logo a {
+		font-size: 0.5rem;
+	}
+
+	.about .row {
+		justify-content: center;
+	}
+}
